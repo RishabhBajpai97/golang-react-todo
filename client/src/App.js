@@ -1,6 +1,5 @@
 
 import { Heading, VStack } from '@chakra-ui/react';
-import './App.css';
 import Todo from './Todo';
 
 

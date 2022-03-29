@@ -4,7 +4,7 @@ import { Container, Heading, HStack, VStack, Text, Spacer, Input, Button } from 
 import { DeleteIcon, CheckIcon, } from "@chakra-ui/icons"
 
 
-const endpoint = "http://localhost:9000"
+const endpoint = "https://protected-ocean-71899.herokuapp.com"
 
 
 class Todo extends Component {
@@ -84,7 +84,7 @@ class Todo extends Component {
     }
     deleteTask = (id) => {
         console.log(id)
-        axios.delete(endpoint + "/api/task/" + id, {
+        axios.delete(endpoint + "/api/deleteTask/" + id, {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             }
@@ -96,7 +96,7 @@ class Todo extends Component {
         })
     }
     deleteAllTask = () => {
-        axios.delete(endpoint + '/api/task', {
+        axios.delete(endpoint + '/api/deleteTask', {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             }
